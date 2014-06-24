@@ -1,0 +1,1 @@
+﻿// Config for charts on scorecard page should probably be here

@@ -1,0 +1,22 @@
+#footer {
+	width: 100%;
+	overflow: hidden;
+
+	a, a:hover {
+		text-decoration: none;
+	}
+}
+
+#footer-logo {
+	margin: 0 2em 0.5em 0;
+	float: right;
+	text-transform: uppercase;
+	color: white;
+
+	@include disable-user-select;
+	cursor: pointer;
+
+	img {
+		margin-left: 10px;
+	}
+}

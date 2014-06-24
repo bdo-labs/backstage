@@ -1,0 +1,13 @@
+{
+	"apps": {
+		"Strategi": {
+			"relativePath": "../../Strategi/Main/Source/FrontEnd/app/",
+			"testsPath": "../../Strategi/Main/Tests/"
+		}
+	},
+	"buildFolder": "../build/",
+	"dependencies": [
+		"Strategi",
+		"ui.router"
+	]
+}

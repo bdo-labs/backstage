@@ -1,0 +1,50 @@
+// External
+@import 'bootstrap';
+@import 'font-awesome';
+
+// Internal
+@import 'variables-and-mixins';
+@import 'frame';
+@import 'boxes';
+@import 'elements';
+@import 'modules';
+@import 'charts';
+
+* {
+	font-family: $font-family;
+}
+
+// http://angular-ui.github.io/bootstrap/
+.nav, .pagination, .carousel, .panel-title a {
+	cursor: pointer;
+}
+
+.bold-text {
+	font-weight: 700;
+}
+
+.center-horizontal {
+	text-align: center;
+}
+
+.status-color {
+	&.good {
+		color: $good-color;
+	}
+
+	&.warning {
+		color: $warning-color;
+	}
+
+	&.danger {
+		color: $danger-color;
+	}
+}
+
+.module-content-wrapper {
+	width: 100%;
+}
+
+.portrait {
+	border-radius: 50px;
+}

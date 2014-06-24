@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="backstage">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>
+		BDO Suite
+	</title>
+
+	<link rel="stylesheet" href="stylesheets/main.css">
+
+	<!-- font from adobe -->
+	<script type="text/javascript" src="//use.typekit.net/ttv5phf.js"></script>
+
+	<script type="text/javascript">try { Typekit.load(); } catch (e) { }</script>
+
+</head>
+
+<body ui-view>
+	<div id="wrapper">
+
+		<!-- Top header -->
+		<nav class="header" role="navigation">
+
+			<span class="breadcrumbs product-logo strategi">Strategi</span>
+
+			<!-- Profile image and search button at the right -->
+			<ul class="right-controls">
+
+				<li>
+					<a href="#"><i class="fa fa-lg fa-search"></i></a>
+				</li>
+
+
+				<li class="dropdown">
+
+					<a href="#" class="dropdown-toggle user-controls" data-toggle="dropdown">
+						<img alt="Portrett av Bruker" src="gfx/user.png">
+						<span>3</span>
+					</a>
+
+					<ul class="dropdown-menu">
+						<li><a href="#">Nothin' here yet</a></li>
+					</ul>
+
+				</li>
+
+			</ul>
+
+		</nav>
+
+		<!-- Angular output-->
+		<div id="page-wrapper" module-renderer="boxes"></div>
+
+
+	</div><!-- /#wrapper -->
+
+	<!-- Vendor Libs: jQuery only used for Bootstrap functionality -->
+	<script src="js/libs/angular.js"></script>
+	<script src="js/libs/angular-route.js"></script>
+	<script src="js/libs/angular-locale_nb-no.js"></script>
+	<script src="js/libs/jquery.min.js"></script>
+	<script src="js/libs/ui-bootstrap-tpls-0.10.0.min.js"></script>
+	<script src="js/libs/highcharts-ng.js"></script>
+	<script src="js/libs/angular-ui-router.min.js"></script>
+	<script src="https://cdn.firebase.com/js/client/1.0.11/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
+	<script src="http://code.highcharts.com/highcharts.js"></script>
+
+	<script src="bs.min.js"></script>
+
+</body>
+</html>

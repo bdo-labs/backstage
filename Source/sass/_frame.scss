@@ -1,0 +1,18 @@
+body {
+	background-color: $body-color;
+}
+
+#wrapper {
+	padding-left: 0;
+	transition: all $transition-speed;
+}
+
+#page-wrapper {
+	width: 100%;
+	padding: 10px;
+	transition: all $transition-speed;
+}
+
+//import elements
+@import 'frame/header';
+@import 'frame/footer';
