@@ -1,13 +1,27 @@
 {
   "name": "Backstage",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-closure-tools": "^0.9.6",
-    "grunt-contrib-compass": "^0.8.0",
-    "grunt-contrib-copy": "^0.5.0",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-script-link-tags": "0.0.5",
-    "grunt-text-replace": "^0.3.12"
+    "angular": "^1.2.18",
+    "angular-ui-router": "^0.2.10",
+    "atomify": "^3.1.2",
+    "partialify": "^3.1.1"
+  },
+  "dependencies": {
+    "user": "git+ssh://git@github.com:bdo-labs/user.git"
+  },
+  "scripts": {
+    "build": "atomify"
+  },
+  "atomify": {
+    "js": {
+      "entry": "backstage.js",
+      "output": "dist/bundle.js"
+    }
+  },
+  "browserify": {
+    "transform": [
+      "partialify"
+    ]
   }
 }

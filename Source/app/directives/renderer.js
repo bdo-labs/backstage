@@ -13,7 +13,7 @@
  *   }
  * }
  */
-backstage.directive('moduleRenderer', function ($compile) {
+module.exports = ['$compile', function ($compile) {
 
 	// This class is added to all modules by default
 	var defaultClassName = 'suite-module';
@@ -133,4 +133,4 @@ backstage.directive('moduleRenderer', function ($compile) {
 			});
 		}
 	}
-});
+}]
