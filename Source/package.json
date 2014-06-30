@@ -8,7 +8,8 @@
     "partialify": "^3.1.1"
   },
   "dependencies": {
-    "user": "git+ssh://git@github.com:bdo-labs/user.git"
+    "user": "git+ssh://git@github.com:bdo-labs/user.git",
+    "services": "git+http://edbdo.visualstudio.com/DefaultCollection/BDO%20Labs/_git/Services"
   },
   "scripts": {
     "build": "atomify"
