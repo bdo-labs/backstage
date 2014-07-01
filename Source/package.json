@@ -1,27 +1,30 @@
 {
   "name": "Backstage",
   "version": "0.1.0",
+  "description": "Renderer and organisator of different components",
+  "repository": "git@github.com:bdo-labs/backstage.git",
   "devDependencies": {
     "angular": "^1.2.18",
     "angular-ui-router": "^0.2.10",
     "atomify": "^3.1.2",
+    "browserify": "^4.2.0",
     "partialify": "^3.1.1"
   },
   "dependencies": {
-    "user": "git+ssh://git@github.com:bdo-labs/user.git",
-    "services": "git+http://edbdo.visualstudio.com/DefaultCollection/BDO%20Labs/_git/Services"
+    "user": "git+ssh://git@github.com:bdo-labs/user.git"
   },
   "scripts": {
     "build": "atomify"
   },
+  "main": "backstage.js",
   "atomify": {
     "js": {
       "entry": "backstage.js",
-      "output": "dist/bundle.js"
+      "output": "build/bundle.js"
     }
   },
   "browserify": {
-    "transform": [
+    "transforms": [
       "partialify"
     ]
   }
