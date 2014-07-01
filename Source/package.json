@@ -11,7 +11,9 @@
     "partialify": "^3.1.1"
   },
   "dependencies": {
-    "user": "git+ssh://git@github.com:bdo-labs/user.git"
+    "user": "git+ssh://git@github.com:bdo-labs/user.git",
+    "styles": "git+ssh://git@github.com:bdo-labs/styles.git",
+    "services": "git+https://edbdo.visualstudio.com/DefaultCollection/BDO%20Labs/_git/Services"
   },
   "scripts": {
     "build": "atomify"
@@ -21,6 +23,10 @@
     "js": {
       "entry": "backstage.js",
       "output": "build/bundle.js"
+    },
+    "css": {
+      "entry": "index.css",
+      "output": "build/bundle.css"
     }
   },
   "browserify": {
