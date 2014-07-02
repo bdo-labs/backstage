@@ -13,7 +13,7 @@
   "dependencies": {
     "user": "git+ssh://git@github.com:bdo-labs/user.git",
     "styles": "git+ssh://git@github.com:bdo-labs/styles.git",
-    "services": "git+https://edbdo.visualstudio.com/DefaultCollection/BDO%20Labs/_git/Services"
+    "strategi": "git+ssh://git@github.com:bdo-labs/strategi.git"
   },
   "scripts": {
     "build": "atomify"
