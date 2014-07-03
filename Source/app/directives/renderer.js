@@ -13,10 +13,23 @@
  *   }
  * }
  */
-module.exports = ['$compile', function ($compile) {
+backstage.directive('moduleRenderer', function ($compile) {
 
 	// This class is added to all modules by default
 	var defaultClassName = 'suite-module';
+
+
+	/**
+	 * Does the opposite of the $normalize method. Converts from camelCase to
+	 * dash separated names (eg. camelCase to camel-case)
+	 */
+	function denormalize(str) {
+
+		return str.replace(/[A-Z]/g, function (match, offset) {
+			return (offset ? '-' : '') + match.toLowerCase();
+		});
+
+	}
 
 
 	/**
@@ -53,7 +66,7 @@ module.exports = ['$compile', function ($compile) {
 				continue;
 			}
 
-			directiveString += ' ' + a + '="' + attrs[a] + '"';
+			directiveString += ' ' + denormalize(a) + '="' + attrs[a] + '"';
 		}
 
 		// Compile, link and unwrap from jqLite
@@ -133,4 +146,4 @@ module.exports = ['$compile', function ($compile) {
 			});
 		}
 	}
-}]
+});
