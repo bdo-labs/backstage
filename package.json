@@ -8,6 +8,9 @@
     "angular-ui-router": "^0.2.10",
     "atomify": "^3.1.2",
     "browserify": "^4.2.0",
+    "karma": "^0.12.16",
+    "karma-browserifast": "^0.6.1",
+    "karma-jasmine": "^0.1.5",
     "partialify": "^3.1.1"
   },
   "dependencies": {

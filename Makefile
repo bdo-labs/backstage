@@ -14,4 +14,7 @@ node_modules: package.json
 clean:
 	rm -fr build
 
-.PHONY: build clean
+test: build
+	node_modules/karma/bin/karma start
+
+.PHONY: build clean test
