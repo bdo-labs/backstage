@@ -18,10 +18,10 @@
   "scripts": {
     "build": "atomify"
   },
-  "main": "backstage.js",
+  "main": "lib/index.js",
   "atomify": {
     "js": {
-      "entry": "backstage.js",
+      "entry": "lib/index.js",
       "output": "build/bundle.js"
     },
     "css": {

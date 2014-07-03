@@ -5,6 +5,7 @@ SRC:=$(shell find -regex '/^.*(html|js|json|css)$$/')
 
 build: node_modules $(SRC)
 	mkdir -p $@
+	cp index.html $@/
 	atomify
 
 node_modules: package.json
@@ -12,3 +13,5 @@ node_modules: package.json
 
 clean:
 	rm -fr build
+
+.PHONY: build clean
