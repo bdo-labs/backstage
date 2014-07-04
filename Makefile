@@ -5,6 +5,7 @@ SRC:=$(shell find -regex '/^.*(html|js|json|css)$$/')
 
 build: node_modules $(SRC)
 	mkdir -p $@
+	cp index.html $@/
 	atomify
 
 node_modules: package.json
@@ -12,3 +13,8 @@ node_modules: package.json
 
 clean:
 	rm -fr build
+
+test: build
+	node_modules/karma/bin/karma start
+
+.PHONY: build clean test
