@@ -18,18 +18,13 @@
     "styles": "git+ssh://git@github.com:bdo-labs/styles.git",
     "strategi": "git+ssh://git@github.com:bdo-labs/strategi.git"
   },
-  "scripts": {
-    "build": "atomify"
-  },
   "main": "lib/index.js",
   "atomify": {
     "js": {
-      "entry": "lib/index.js",
-      "output": "build/bundle.js"
+      "entry": "lib/index.js"
     },
     "css": {
-      "entry": "index.css",
-      "output": "build/bundle.css"
+      "entry": "index.css"
     }
   },
   "browserify": {
