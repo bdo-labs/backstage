@@ -6,7 +6,10 @@
   <link rel="stylesheet" href="bundle.css">
   <script src="bundle.js" defer></script>
 </head>
-<body ui-view>
-	  <div id="page-wrapper" module-renderer="boxes"></div>
+<body>
+	<div id="page-wrapper">
+		<div menu-renderer></div>
+		<div ui-view module-renderer="boxes"></div>
+	</div>
 </body>
 </html>
