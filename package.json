@@ -16,7 +16,7 @@
   "dependencies": {
     "user": "git+ssh://git@github.com:bdo-labs/user.git",
     "styles": "git+ssh://git@github.com:bdo-labs/styles.git",
-    "strategi": "git+ssh://git@github.com:bdo-labs/strategi.git"
+    "strategy": "git+ssh://git@github.com:bdo-labs/strategy.git"
   },
   "main": "lib/index.js",
   "atomify": {
