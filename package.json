@@ -21,10 +21,16 @@
   "main": "lib/index.js",
   "atomify": {
     "js": {
-      "entry": "lib/index.js"
+      "entry": "lib/index.js",
+      "output": "build/bundle.js"
     },
     "css": {
-      "entry": "index.css"
+      "entry": "index.css",
+      "output": "build/bundle.css",
+      "assets": {
+        "prefix": "assets/",
+        "dest": "build/assets"
+      }
     }
   },
   "browserify": {
