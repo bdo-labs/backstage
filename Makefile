@@ -18,7 +18,7 @@ PATH:=./node_modules/.bin:$(PATH)
 # Source
 #
 
-SRC:=$(shell find -E lib -regex '^.*(html|js|css)$$')
+SRC:=$(wildcard lib/*)
 
 
 #
@@ -29,7 +29,6 @@ all: $(OUT_DIR)
 
 $(OUT_DIR): node_modules $(SRC)
 	mkdir -p $@
-	cp index.html $@/
 	atomify --output $@/bundle
 
 node_modules: package.json
