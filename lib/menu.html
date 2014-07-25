@@ -1,28 +1,13 @@
-<section class="navigation-menu">
-	<ul>
-	<li ng-repeat="list in menuObjects">
-		<div ng-if="$first">
-			<a href="/">{{list[0].name}}</a>
-		</div>
-		<div ng-if="$last && !$first" >
-			<a href >{{list[0].name}}</a>
-			<ul>
-				<li ng-if="!$first" ng-repeat="o in list">
-					<a  ui-sref="{{o.state}}( {{o.routerObject}} )"> {{o.name}}</a>
-				</li>
-			</ul>
-		</div>
-		<div ng-if="!($first || $last)">
-			<a href ng-click="toggle_show($index)" >{{list[0].name}}</a>
-			<div ng-show="show($index)">
-				<input type="text" ng-model="searchable">
-				<ul>
-					<li ng-repeat="o in list | filter:{name:searchable}">
-						<a ui-sref="{{o.state}}( {{o.routerObject}} )"> {{o.name}}</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+<ul>
+	<li ng-repeat="item in menu" ng-if="item.dropdown" bdo-dropdown>
+		<a href="">{{item[0].name}}</a>
+		<ul>
+			<li ng-repeat="el in item">
+				<a ui-sref="{{el.state}}({{el.routerObject}})">{{el.name}}</a>
+			</li>
+		</ul>
 	</li>
-	</ul>
-</section>
+	<li ng-repeat="item in menu" ng-if="!item.dropdown">
+		<a ui-sref="{{item.state}}({{item.routerObject}})">{{item.name}}</a>
+	</li>
+</ul>
