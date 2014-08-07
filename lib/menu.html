@@ -7,10 +7,7 @@
 			</li>
 		</ul>
 	</li>
-	<li ng-if="!item.dropdown && item.active">
-		<a class="active" ui-sref="{{item.state}}({{item.routerObject}})">{{item.name}}</a>
-	</li>
-	<li ng-repeat-end="item in menu" ng-if="!item.dropdown && !item.active">
-		<a ui-sref="{{item.state}}({{item.routerObject}})">{{item.name}}</a>
+	<li ng-repeat-end="item in menu" ng-if="!item.dropdown">
+		<a class="{{item.active}}" ui-sref="{{item.state}}({{item.routerObject ? item.routerObject : ''}})">{{item.name}}</a>
 	</li>
 </ul>
