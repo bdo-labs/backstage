@@ -5,7 +5,7 @@
   "repository": "git@github.com:bdo-labs/backstage.git",
   "devDependencies": {
     "angular": "^1.2.18",
-    "angular-ui-router": "^0.2.10",
+    "angular-ui-router": "git+ssh://git@github.com:bdo-labs/ui-router.git#activeparent",
     "atomify": "^3.1.2",
     "browserify": "^4.2.0",
     "karma": "^0.12.16",
@@ -17,7 +17,8 @@
     "user": "git+ssh://git@github.com:bdo-labs/user.git",
     "styles": "git+ssh://git@github.com:bdo-labs/styles.git",
     "strategy": "git+ssh://git@github.com:bdo-labs/strategy.git",
-    "custom-elements": "git+ssh://git@github.com:bdo-labs/custom-elements.git"
+    "custom-elements": "git+ssh://git@github.com:bdo-labs/custom-elements.git",
+    "filters": "git+ssh://git@github.com:bdo-labs/filters.git"
   },
   "main": "lib/index.js",
   "atomify": {
