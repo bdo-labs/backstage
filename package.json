@@ -24,7 +24,11 @@
   "atomify": {
     "js": {
       "entry": "lib/index.js",
-      "output": "build/bundle.js"
+      "output": "build/bundle.js",
+      "assets": {
+        "prefix": "assets/",
+        "dest": "build/assets"
+      }
     },
     "css": {
       "entry": "index.css",
