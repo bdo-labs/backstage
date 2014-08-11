@@ -229,5 +229,54 @@ describe('Module renderer directive', function () {
 		expect(e.children()[0].getAttribute('norm-testing')).toBe('test');
 	});
 
+	it('should handle templates', function () {
+		scope.boxes = [{
+			template: 'Hei'
+		}];
+
+		var e = compileDirective();
+
+		expect(e.children()[0].innerHTML).toEqual('Hei');
+	});
+
+	it('should compile templates', function () {
+		scope.boxes = [{
+			template: '<div ng-repeat="a in [1, 2, 3]"></div>'
+		}];
+
+		// Notice we have to count divs - angular adds comment nodes
+		var e = compileDirective(),
+			divCount = Array.prototype.reduce.call(e.children()[0].childNodes,
+			function (result, node) {
+				return result + (node.tagName === 'DIV');
+			},
+			0
+		);
+
+		expect(divCount).toBe(3);
+
+	});
+
+
+	it('should throw error on invalid config', function () {
+		scope.boxes = [{}];
+
+		expect(function () {
+			compileDirective();
+		}).toThrow();
+	});
+
+	it('should compile templates against the correct scope', function () {
+		scope.boxes = [{
+			template: '{{testvalue}}'
+		}];
+
+		scope.testvalue = 'aoeu';
+		
+		var e = compileDirective();
+		
+		expect(e.children()[0].innerHTML).toBe('aoeu');
+	});
+	
 
 });
