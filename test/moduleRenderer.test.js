@@ -188,6 +188,16 @@ describe('Module renderer directive', function () {
 		expect(e.children().length).toBe(2);
 	});
 
+	it('should handle swapping out the first boxes', function () {
+		scope.boxes = ['mock', 'mock2', 'mock3'];
+		var e = compileDirective();
+		expect(e.children().length).toBe(3);
+
+		scope.boxes = ['mocket', 'mock2', 'mock3'];
+		scope.$digest();
+		expect(e.children().length).toBe(3);
+	});
+
 	it('should add normalized attributes from box config to directive', function () {
 		var attrs,
 			e;
