@@ -7,8 +7,10 @@
 			</li>
 		</ul>
 	</li>
-	<li ng-repeat-end="item in menu" ng-if="!item.dropdown">
+	<li ng-if="!item.dropdown && !item.template">
 		<a ng-if="item.state | includesDot" ui-sref-active="active" ui-sref="{{item.state}}({{item.routerObject ? item.routerObject : ''}})">{{item.name}}</a>
 		<a ng-if="!(item.state | includesDot)" ui-sref-active-eq="active" ui-sref="{{item.state}}({{item.routerObject ? item.routerObject : ''}})">{{item.name}}</a>
+	</li>
+	<li ng-repeat-end="item in menu" ng-if="item.template" id="{{item.id}}">
 	</li>
 </ul>
