@@ -2,22 +2,14 @@
 Backstage
 ===========
 
-Renderer and organizer
+Main entrance to BDO-applications. The `backstage` is a set of renderers
+that take arrays of elements and neatly populates the DOM accordingly. To
+get up and running, simply fire off:
 
-
-Installing
-----------
-
-    $ git clone https://github.com/bdo-labs/backstage && cd backstage
-    $ make -s
-
-
-Running tests
--------------
-
-Running tests from `backstage` will eventually run the entire test-suite
-
-    $ make -s test
+```sh
+$ npm install bdo-labs/backstage
+$ npm start
+```
 
 
 License
