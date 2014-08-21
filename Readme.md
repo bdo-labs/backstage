@@ -2,14 +2,21 @@
 Backstage
 ===========
 
-Main entrance to BDO-applications. The `backstage` is a set of renderers
-that take arrays of elements and neatly populates the DOM accordingly. To
-get up and running, simply fire off:
+`Backstage` is where we compose our main components. It sets up everything
+that's necessary for rendering and includes only the more lower-level
+components that deal with routing etc.
+
+
+Usage
+-----
 
 ```sh
 $ npm install bdo-labs/backstage
 $ npm start
 ```
+
+That's it! Your favorite browser should launch and you'll be introduced to
+our frontstage :rocket:.
 
 
 License

@@ -10,6 +10,10 @@
     "test": "karma"
   },
   "atomify": {
+    "assets": {
+      "prefix": "build/assets/",
+      "dest": "build/assets"
+    },
     "js": {
       "entry": "lib/index.js",
       "alias": "bdo.js",
@@ -18,11 +22,7 @@
     "css": {
       "entry": "index.css",
       "alias": "bdo.css",
-      "output": "build/bundle.css",
-      "assets": {
-        "prefix": "assets/",
-        "dest": "build/assets"
-      }
+      "output": "build/bundle.css"
     },
     "server": {
       "sync": true,
