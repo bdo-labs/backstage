@@ -10,15 +10,17 @@
 <body>
   <div id="page-wrapper">
     <header>
-      <div bdo-logo></div>
-      <div class="controls">
-        <div bdo-search></div>
-        <div user-menu bdo-dropdown></div>
+      <div class="top">
+        <div bdo-logo></div>
+        <div class="controls">
+          <div bdo-search></div>
+          <div user-menu bdo-dropdown></div>
+        </div>
+        <nav menu-renderer="top" class="menu top-menu"></nav>
       </div>
-      <nav menu-renderer="top" class="menu top-menu"></nav>
       <div menu-renderer="filter" class="menu filter-menu"></div>
     </header>
-    <div bdo-view module-renderer="boxes"></div>
+    <main bdo-view module-renderer="boxes"></main>
   </div>
 </body>
 </html>

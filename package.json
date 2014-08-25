@@ -40,6 +40,7 @@
     "angular-ui-router": "bdo-labs/ui-router#activeparent",
     "atomify": "^3.1.2",
     "browserify": "^4.2.0",
+    "browserify-graph": "0.0.0",
     "karma": "^0.12.22",
     "karma-browserifast": "^0.6.1",
     "karma-chrome-launcher": "^0.1.4",
