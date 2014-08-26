@@ -6,7 +6,8 @@
   "main": "lib/index.js",
   "style": "index.css",
   "scripts": {
-    "start": "atomify",
+    "start": "atomify --server [ --sync --path index.html --open ]",
+    "build": "atomify",
     "test": "karma"
   },
   "atomify": {
@@ -23,11 +24,6 @@
       "entry": "index.css",
       "alias": "bdo.css",
       "output": "build/bundle.css"
-    },
-    "server": {
-      "sync": true,
-      "path": "index.html",
-      "open": true
     }
   },
   "browserify": {

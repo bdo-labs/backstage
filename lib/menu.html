@@ -1,16 +1,19 @@
 <ul ng-show="menu">
-	<li ng-repeat-start="item in menu" ng-if="item.dropdown" bdo-dropdown>
-		<a href="">{{item[0].name}}</a>
-		<ul>
-			<li ng-repeat="el in item">
-				<a ui-sref="{{el.state}}({{el.routerObject}})">{{el.name}}</a>
-			</li>
-		</ul>
-	</li>
-	<li ng-if="!item.dropdown && !item.template">
-		<a ng-if="item.state | includesDot" ui-sref-active="active" ui-sref="{{item.state}}({{item.routerObject ? item.routerObject : ''}})">{{item.name}}</a>
-		<a ng-if="!(item.state | includesDot)" ui-sref-active-eq="active" ui-sref="{{item.state}}({{item.routerObject ? item.routerObject : ''}})">{{item.name}}</a>
-	</li>
-	<li ng-repeat-end="item in menu" ng-if="item.template" id="{{item.id}}">
-	</li>
+  <li ng-repeat-start="item in menu" ng-if="item.dropdown" bdo-dropdown>
+    <a href="">
+      <i ng-show="item[0] && item[0].icon" class="{{item[0].icon}}"></i>
+      {{item[0].name}}
+    </a>
+    <ul>
+      <li ng-repeat="el in item">
+        <a ui-sref="{{el.state}}({{el.routerObject}})">{{el.name}}</a>
+      </li>
+    </ul>
+  </li>
+  <li ng-if="!item.dropdown && !item.template">
+    <a ng-if="item.state | includesDot" ui-sref-active="active" ui-sref="{{item.state}}({{item.routerObject ? item.routerObject : ''}})">{{item.name}}</a>
+    <a ng-if="!(item.state | includesDot)" ui-sref-active-eq="active" ui-sref="{{item.state}}({{item.routerObject ? item.routerObject : ''}})">{{item.name}}</a>
+  </li>
+  <li ng-repeat-end="item in menu" ng-if="item.template" id="{{item.id}}">
+  </li>
 </ul>
